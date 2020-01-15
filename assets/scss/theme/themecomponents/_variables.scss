@@ -1,0 +1,23 @@
+/************* FONT FAMILY *************/
+
+$familyDefault: 'Montserrat';
+$fallbackfont: sans-serif;
+
+/************* MEDIA BREAKPOINT  *************/
+
+$desktop-2k: "(min-width: 1920px)";
+$desktop-xxl: "(min-width: 1441px)";
+$desktop-xl: "(min-width: 1367px)";
+$desktop-lg: "(min-width: 1200px)";
+$desktop: "(min-width: 992px)";
+$tablet: "(min-width: 768px)";
+$mobile: "(min-width: 576px)";
+$onlymobile: "(max-width: 800px)";
+$mobile-xs: "(max-width: 575px)";
+
+/************* IMAGE PATH  *************/
+
+$assetPath: "../img/";
+$primary: #a21f6d;
+$secondary: #ffb400;
+$blue: #007bff;

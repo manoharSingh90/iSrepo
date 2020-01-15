@@ -1,0 +1,176 @@
+.brandDetail {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    & .brandDetail-info {
+        padding: 20px 30px;
+        max-width: 490px;
+        color: #fff;
+        & .brand-link {
+            font-weight: 600;
+            color: #333;
+            position: relative;
+            padding-left: 60px;
+            padding-top: 10px;
+            min-height: 50px;
+            display: block;
+            margin-bottom: 28px;
+            & h1 {
+                font-size: 15px;
+                margin: 0;
+                color: #fff;
+            }
+            & span {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: block;
+                overflow: hidden;
+                border: 1px solid #f1f1f1;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            & small {
+                opacity: .7;
+                font-size: 10px;
+                color: #fff;
+            }
+        }
+        & h2 {
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        & p {
+            font-size: 11px;
+        }
+        & .brandDetail-button {
+            padding: 5px 0;
+            & .btn {
+                margin: 0 15px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    & .brandDetail-gallery {
+        padding: 0 15px;
+        & h2 {
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        & .countStatus {
+            margin-bottom: 20px;
+            width: 280px;
+            & p {
+                display: flex;
+                color: #fff;
+                font-size: 11px;
+                margin: 0;
+                text-transform: uppercase;
+                padding-bottom: 5px;
+                & span {
+                    width: 50%;
+                    padding: 5px 5px;
+                }
+            }
+            & .sampleCount {
+                border-radius: 8px;
+                display: inline-block;
+                background: rgba(#fff, .2);
+                vertical-align: middle;
+                width: 100%;
+                & ul {
+                    display: flex;
+                    padding: 5px;
+                    & li {
+                        padding: 5px 15px;
+                        width: 100%;
+                        & span {
+                            font-size: 15px;
+                            line-height: 18px;
+                            font-weight: 500;
+                            color: #fff;
+                            display: block;
+                        }
+                        & small {
+                            display: block;
+                            font-size: 10px;
+                            color: #eee;
+                        }
+                        &:nth-child(2) {
+                            border-right: 1px solid rgba(#fff, .2);
+                        }
+                    }
+                }
+                &.xtraWide {
+                    max-width: 440px;
+                    width: 440px;
+                }
+                &.borderStyle {
+                    & ul {
+                        padding: 10px 0;
+                        & li {
+                            padding: 0 14px;
+                            border-right: 1px solid rgba(#fff, .25);
+                            width: auto;
+                            &:last-child {
+                                border-right: none;
+                            }
+                            & span {
+                                font-size: 16px;
+                                line-height: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .brandDetail-gallery {
+            max-width: 640px;
+            background: #fff;
+            border-radius: 12px;
+            padding: 10px 30px;
+        }
+    }
+}
+
+.audienceView {
+    & h3 {
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 6px;
+        color: #777;
+    }
+    & ul {
+        font-size: 12px;
+        opacity: .98;
+        display: flex;
+        flex-wrap: wrap;
+        &.listStyle {
+            list-style: inside;
+            list-style-type: disc;
+        }
+        & li {
+            width: 50%;
+            padding: 3px 0;
+            &:first-child:nth-last-child(n + 2),
+            &:first-child:nth-last-child(n + 2)~li {
+                width: 25%;
+            }
+            &:first-child:nth-last-child(n + 5),
+            &:first-child:nth-last-child(n + 5)~li {
+                width: 33.3%;
+            }
+        }
+    }
+}

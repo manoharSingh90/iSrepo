@@ -1,0 +1,69 @@
+.scrtabs-tab-container {
+    height: 42px;
+    position: relative;
+    z-index: 1;
+}
+
+.scrtabs-tabs-fixed-container {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    height: 42px;
+    overflow: hidden;
+}
+
+.scrtabs-tab-scroll-arrow {
+    display: none;
+    width: 30px;
+    height: calc(100% - 5px);
+    background: $secondary;
+    position: absolute;
+    top: 0;
+    &:hover {
+        opacity: .85;
+    }
+    & span {
+        display: block;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+        &:after {
+            content: "";
+            width: 30px;
+            height: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: url(#{$assetPath}icons/ar-lt.svg);
+            background-size: 50% 50%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    &.scrtabs-disable {
+        display: none;
+    }
+    &.scrtabs-tab-scroll-arrow-left {
+        left: -.938rem;
+        & span {
+            &:after {
+                transform: rotate(0);
+            }
+        }
+    }
+    &.scrtabs-tab-scroll-arrow-right {
+        right: -.938rem;
+        & span {
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.scrtabs-tabs-movable-container {
+    position: relative;
+}

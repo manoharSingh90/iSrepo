@@ -1,0 +1,120 @@
+.brandDetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 1; }
+  .brandDetail .brandDetail-info {
+    padding: 20px 30px;
+    max-width: 490px;
+    color: #fff; }
+    .brandDetail .brandDetail-info .brand-link {
+      font-weight: 600;
+      color: #333;
+      position: relative;
+      padding-left: 60px;
+      padding-top: 10px;
+      min-height: 50px;
+      display: block;
+      margin-bottom: 28px; }
+      .brandDetail .brandDetail-info .brand-link h1 {
+        font-size: 15px;
+        margin: 0;
+        color: #fff; }
+      .brandDetail .brandDetail-info .brand-link span {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: block;
+        overflow: hidden;
+        border: 1px solid #f1f1f1;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0; }
+      .brandDetail .brandDetail-info .brand-link small {
+        opacity: .7;
+        font-size: 10px;
+        color: #fff; }
+    .brandDetail .brandDetail-info h2 {
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-weight: 400; }
+    .brandDetail .brandDetail-info p {
+      font-size: 11px; }
+    .brandDetail .brandDetail-info .brandDetail-button {
+      padding: 5px 0; }
+      .brandDetail .brandDetail-info .brandDetail-button .btn {
+        margin: 0 15px; }
+        .brandDetail .brandDetail-info .brandDetail-button .btn:first-child {
+          margin-left: 0; }
+        .brandDetail .brandDetail-info .brandDetail-button .btn:last-child {
+          margin-right: 0; }
+  .brandDetail .brandDetail-gallery {
+    padding: 0 15px; }
+    .brandDetail .brandDetail-gallery h2 {
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-weight: 400; }
+    .brandDetail .brandDetail-gallery .countStatus {
+      margin-bottom: 20px;
+      width: 280px; }
+      .brandDetail .brandDetail-gallery .countStatus p {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        color: #fff;
+        font-size: 11px;
+        margin: 0;
+        text-transform: uppercase;
+        padding-bottom: 5px; }
+        .brandDetail .brandDetail-gallery .countStatus p span {
+          width: 50%;
+          padding: 5px 5px; }
+      .brandDetail .brandDetail-gallery .countStatus .sampleCount {
+        border-radius: 8px;
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        vertical-align: middle;
+        width: 100%; }
+        .brandDetail .brandDetail-gallery .countStatus .sampleCount ul {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          padding: 5px; }
+          .brandDetail .brandDetail-gallery .countStatus .sampleCount ul li {
+            padding: 5px 15px;
+            width: 100%; }
+            .brandDetail .brandDetail-gallery .countStatus .sampleCount ul li span {
+              font-size: 15px;
+              line-height: 18px;
+              font-weight: 500;
+              color: #fff;
+              display: block; }
+            .brandDetail .brandDetail-gallery .countStatus .sampleCount ul li small {
+              display: block;
+              font-size: 10px;
+              color: #eee; }
+            .brandDetail .brandDetail-gallery .countStatus .sampleCount ul li:nth-child(2) {
+              border-right: 1px solid rgba(255, 255, 255, 0.2); }
+        .brandDetail .brandDetail-gallery .countStatus .sampleCount.xtraWide {
+          max-width: 440px;
+          width: 440px; }
+        .brandDetail .brandDetail-gallery .countStatus .sampleCount.borderStyle ul {
+          padding: 10px 0; }
+          .brandDetail .brandDetail-gallery .countStatus .sampleCount.borderStyle ul li {
+            padding: 0 14px;
+            border-right: 1px solid rgba(255, 255, 255, 0.25);
+            width: auto; }
+            .brandDetail .brandDetail-gallery .countStatus .sampleCount.borderStyle ul li:last-child {
+              border-right: none; }
+            .brandDetail .brandDetail-gallery .countStatus .sampleCount.borderStyle ul li span {
+              font-size: 16px;
+              line-height: 18px; }
+    .brandDetail .brandDetail-gallery .brandDetail-gallery {
+      max-width: 640px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 10px 30px; }

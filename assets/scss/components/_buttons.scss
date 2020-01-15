@@ -1,0 +1,138 @@
+.btn {
+    transition: all 200ms linear;
+    box-shadow: none !important;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-family: $familyDefault, $fallbackfont;
+    font-weight: 500;
+    font-size: 13px;
+    padding-top: .45rem;
+    padding-bottom: .45rem;
+    border: none;
+    &:focus,
+    &.focus {
+        box-shadow: none;
+    }
+    &:hover {
+        color: $white;
+    }
+}
+
+.btn-primary {
+    color: $white;
+    border-color: #1a1a1a;
+    &:focus,
+    &.focus {
+        box-shadow: none;
+    }
+}
+
+.btn-style {
+    color: $white;
+    background: rgb(65, 150, 255);
+    background: linear-gradient(90deg, rgba(65, 150, 255, 1) 0%, rgba(42, 90, 223, 1) 100%);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-width: 120px;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 96%;
+        height: 20px;
+        background: url("../img/button_bg.png") no-repeat center bottom;
+        background-size: contain;
+        opacity: .65;
+        transition: all 400ms ease;
+    }
+    &:focus,
+    &.focus {
+        box-shadow: none;
+        color: $white;
+    }
+    &:hover {
+        box-shadow: 0 0 12px rgba(65, 150, 255, 0.9) !important;
+        &:after {
+            opacity: .35;
+        }
+    }
+}
+
+.btn-secondary {
+    border-color: #1a1a1a;
+}
+
+.btn-group-lg>.btn,
+.btn-lg {
+    font-size: 1rem;
+}
+
+.btn-group-sm>.btn,
+.btn-sm {
+    padding: 0 1.15rem;
+    font-size: 11px;
+    line-height: 24px;
+    min-width: auto;
+}
+
+.btn-link {
+    color: #999;
+    font-weight: 700;
+    &:hover,
+    &:focus,
+    &.focus {
+        color: #999;
+        text-decoration: none;
+    }
+}
+
+.btn-outline-primary {
+    color: $primary;
+    border-color: $primary;
+    position: relative;
+    &:focus,
+    &.focus {
+        box-shadow: none;
+    }
+    &:hover {
+        opacity: .9;
+        color: rgba($primary, .7);
+        background-color: transparent;
+        border-color: rgba($primary, .7);
+        box-shadow: 2px 4px 24px rgba($black, .25);
+    }
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        background-color: transparent;
+        color: $primary;
+        border-color: $primary;
+    }
+}
+
+.btn-shadow {
+    box-shadow: 0 2px 10px rgba($indigo, .2) !important;
+    &:hover {
+        // box-shadow: 2px 2px 0 rgba($indigo, .1) !important;
+        box-shadow: 0 4px 30px rgba($indigo, .45) !important;
+    }
+}
+
+.btn-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 .5rem;
+    margin-top: -2px;
+    & img {
+        display: block;
+    }
+}
+
+.btn-light {
+    color: #aaa !important;
+}
+
+.text-default {
+    color: $light !important;
+}

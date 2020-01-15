@@ -1,0 +1,16 @@
+/*!
+ * THEME(V1)
+ */
+
+// Core variables and mixins
+@import "themecomponents/_variables.scss";
+@import "themecomponents/_mixins.scss";
+// Reset Style CSS
+@import "themecomponents/_reset.scss";
+// Core CSS
+@import "../components/_buttons.scss";
+@import "../components/_forms.scss";
+@import "../components/_modal.scss";
+@import "../components/_tabs.scss";
+//@import "../components/_dropdown-menu.scss";
+//@import "../components/_alert.scss";

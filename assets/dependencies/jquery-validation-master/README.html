@@ -1,0 +1,64 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="jquery-validation-plugin-form-validation-made-easy"><a href="https://jqueryvalidation.org/">jQuery Validation Plugin</a> - Form validation made easy</h1>
+<p><a href="https://travis-ci.org/jquery-validation/jquery-validation"><img src="https://secure.travis-ci.org/jquery-validation/jquery-validation.svg" alt="Build Status"></a>
+<a href="https://david-dm.org/jquery-validation/jquery-validation#info=devDependencies"><img src="https://david-dm.org/jquery-validation/jquery-validation/dev-status.svg?theme=shields.io" alt="devDependency Status"></a></p>
+<p>The jQuery Validation Plugin provides drop-in validation for your existing forms, while making all kinds of customizations to fit your application really easy.</p>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="downloading-the-prebuilt-files">Downloading the prebuilt files</h3>
+<p>Prebuilt files can be downloaded from <a href="https://jqueryvalidation.org/">https://jqueryvalidation.org/</a></p>
+<h3 id="downloading-the-latest-changes">Downloading the latest changes</h3>
+<p>The unreleased development files can be obtained by:</p>
+<ol>
+<li><a href="https://github.com/jquery-validation/jquery-validation/archive/master.zip">Downloading</a> or Forking this repository</li>
+<li><a href="CONTRIBUTING.md#build-setup">Setup the build</a></li>
+<li>Run <code>grunt</code> to create the built files in the &quot;dist&quot; directory</li>
+</ol>
+<h3 id="including-it-on-your-page">Including it on your page</h3>
+<p>Include jQuery and the plugin on a page. Then select a form to validate and call the <code>validate</code> method.</p>
+<pre><code class="lang-html">&lt;form&gt;
+    &lt;input required&gt;
+&lt;/form&gt;
+&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;jquery.validate.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(&quot;form&quot;).validate();
+&lt;/script&gt;
+</code></pre>
+<p>Alternatively include jQuery and the plugin via requirejs in your module.</p>
+<pre><code class="lang-js">define([&quot;jquery&quot;, &quot;jquery.validate&quot;], function( $ ) {
+    $(&quot;form&quot;).validate();
+});
+</code></pre>
+<p>For more information on how to setup a rules and customizations, <a href="https://jqueryvalidation.org/documentation/">check the documentation</a>.</p>
+<h2 id="reporting-issues-and-contributing-code">Reporting issues and contributing code</h2>
+<p>See the <a href="CONTRIBUTING.md">Contributing Guidelines</a> for details.</p>
+<p><strong>IMPORTANT NOTE ABOUT EMAIL VALIDATION</strong>. As of version 1.12.0 this plugin is using the same regular expression that the <a href="https://html.spec.whatwg.org/multipage/forms.html#valid-e-mail-address">HTML5 specification suggests for browsers to use</a>. We will follow their lead and use the same check. If you think the specification is wrong, please report the issue to them. If you have different requirements, consider <a href="https://jqueryvalidation.org/jQuery.validator.addMethod/">using a custom method</a>.
+In case you need to adjust the built-in validation regular expression patterns, please <a href="https://jqueryvalidation.org/jQuery.validator.methods/">follow the documentation</a>.</p>
+<p><strong>IMPORTANT NOTE ABOUT REQUIRED METHOD</strong>. As of version 1.14.0 this plugin stops trimming white spaces from the value of the attached element. If you want to achieve the same result, you can use the <a href="https://jqueryvalidation.org/normalizer/"><code>normalizer</code></a> that can be used to transform the value of an element before validation. This feature was available since <code>v1.15.0</code>. In other words, you can do something like this:</p>
+<pre><code class="lang-js">$(&quot;#myForm&quot;).validate({
+    rules: {
+        username: {
+            required: true,
+            // Using the normalizer to trim the value of the element
+            // before validating it.
+            //
+            // The value of `this` inside the `normalizer` is the corresponding
+            // DOMElement. In this example, `this` references the `username` element.
+            normalizer: function(value) {
+                return $.trim(value);
+            }
+        }
+    }
+});
+</code></pre>
+<h2 id="license">License</h2>
+<p>Copyright &copy; Jörn Zaefferer<br>
+Licensed under the MIT license.</p>
+
+      </body>
+    </html>

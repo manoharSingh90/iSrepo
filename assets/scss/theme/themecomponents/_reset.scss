@@ -1,0 +1,190 @@
+// Body Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+body {
+    font-family: $familyDefault, $fallbackfont;
+    font-size: 16px;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga", 0;
+}
+
+.touchevents {
+    body {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    border: none;
+}
+
+button,
+input,
+select,
+textarea {
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+    max-height: 240px;
+}
+
+[role="button"] {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+input[type="search"] {
+    box-sizing: border-box;
+    box-shadow: none;
+    appearance: none;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+    box-shadow: none;
+    appearance: none;
+}
+
+input[type=number] {
+    appearance: textfield;
+}
+
+select {
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.clear-left-sm {
+    float: none !important;
+    @media #{$mobile} {
+        float: left !important;
+    }
+}
+
+.clear-right-sm {
+    float: none !important;
+    @media #{$mobile} {
+        float: right !important;
+    }
+}
+
+.text-normal {
+    text-transform: none !important;
+}
+
+.text-dbl {
+    font-size: 1.125rem !important;
+}
+
+.remove-gutters {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.mobileonly {
+    @media #{$desktop} {
+        display: none !important;
+    }
+}
+
+.tabletonly {
+    @media #{$desktop-lg} {
+        display: none !important;
+    }
+}
+
+.desktoponly {
+    display: none !important;
+    @media #{$desktop} {
+        display: inline-block !important;
+    }
+}
+
+.col-form-label {
+    &.onlylabel {
+        color: #999;
+        font-size: 1rem;
+        font-weight: normal;
+        display: block;
+        text-align: center;
+        @media #{$desktop} {
+            padding: 1.25rem 1rem;
+            padding-right: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.hr-dashed {
+    border-style: dashed;
+    border-color: rgba($black, .25);
+    width: 100%;
+}
+
+form {
+    & small {
+        &.error {
+            clear: both;
+        }
+    }
+}
+
+.fileInput,
+.hideInput {
+    width: 0;
+}
+
+input[type="checkbox"][readonly]+label {
+    pointer-events: none;
+}
+
+.text-primary {
+    color: $primary !important;
+}
+
+.text-link {
+    color: $blue !important;
+}

@@ -1,0 +1,82 @@
+.date-picker-wrapper {
+    border: none;
+    background: #fff;
+    color: #000;
+    font-size: 11px;
+    box-shadow: 0 0 6px rgba(#000, .3);
+    font-family: $familyDefault, $fallbackfont;
+    width: 240px !important;
+    padding: 5px !important;
+    margin-left: 30px;
+    & .month-wrapper {
+        padding: 0;
+        width: 100%;
+        border: none;
+        & table {
+            width: 100%;
+            clear: both;
+            & .day {
+                padding: 8px 0;
+                line-height: 1.5;
+                font-size: 11px;
+                font-weight: 500;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                &.checked {
+                    background-color: $secondary;
+                }
+                &.toMonth {
+                    &.hovering {
+                        background-color: rgba($secondary, .2);
+                    }
+                }
+            }
+        }
+    }
+    & .footer {
+        display: none;
+    }
+    & .first-date-selected,
+    & .last-date-selected {
+        background-color: $secondary !important;
+    }
+}
+
+.datepicker {
+    border: none;
+    background: #fff;
+    color: #000;
+    font-size: 12px;
+    box-shadow: 0 0 6px rgba(#000, .3);
+    font-family: $familyDefault, $fallbackfont;
+    & table {
+        width: 100%;
+        & .day {
+            padding: 8px 0;
+            line-height: 1.5;
+            font-size: 13px;
+            font-weight: 500;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            &.checked {
+                background-color: $secondary;
+            }
+            &.toMonth {
+                &.hovering {
+                    background-color: rgba($secondary, .2);
+                }
+            }
+        }
+    }
+}
+
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.highlighted.active,
+.datepicker table tr td.active.highlighted:active,
+.datepicker table tr td.active:active {
+    color: #fff;
+    background-color: $secondary !important;
+    border-color: $secondary;
+}

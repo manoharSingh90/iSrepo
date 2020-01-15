@@ -1,0 +1,318 @@
+.form-group {
+    margin-bottom: 1rem;
+    @media #{$desktop-xl} {
+        margin-bottom: 1.375rem;
+    }
+}
+
+.col-form-label {
+    text-transform: uppercase;
+    color: inherit;
+    font-size: .875rem;
+    font-weight: bold;
+}
+
+.col-form-sublabel {
+    font-weight: 500;
+    color: #777;
+    margin-bottom: 0;
+    font-size: .813rem;
+    & small {
+        font-size: 88%;
+        opacity: .65;
+    }
+}
+
+.form-control {
+    font-size: 13px;
+    border-width: 1px;
+    border-color: rgba(#000, .15);
+    color: #222;
+    transition: all 200ms linear;
+    background: #f2f2f2;
+    border-radius: 20px;
+    font-family: $familyDefault, $fallbackfont;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    &:focus {
+        box-shadow: none;
+        border-color: #777;
+    }
+    &:disabled,
+    &[readonly] {
+        background: #f2f2f2;
+        border-color: #fff;
+        cursor: default;
+    }
+    &.primary-border {
+        border-color: $primary;
+    }
+    &:disabled,
+    &[readonly] {
+        background: #f2f2f2;
+        border-color: lighten($black, 85%);
+        cursor: default;
+    }
+}
+
+textarea.form-control {
+    border: 1px solid rgba(#000, .15);
+    min-height: 120px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+select.form-control {
+    background-image: url(#{$assetPath}icons/selectarrow.svg);
+    background-position: 96% center;
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    padding-right: 0.7rem;
+    &:not([size]):not([multiple]) {
+        height: inherit;
+    }
+    &:disabled,
+    &[readonly] {
+        background-image: none;
+    }
+}
+
+.form-row {
+    margin-left: -20px;
+    margin-right: -20px;
+    &>.col,
+    &>[class*="col-"] {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+.form-btn-group {
+    & .btn {
+        margin: 0 10px;
+    }
+}
+
+.form-control-plaintext {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    padding-top: 0.125rem;
+    border-top: none;
+    & a {
+        font-size: .875rem;
+        font-weight: 600;
+        margin-left: 2px;
+        text-decoration: underline;
+    }
+}
+
+.input-group-text {
+    border-color: transparent;
+    background: transparent;
+}
+
+.custom-control {
+    padding-left: 1.65rem;
+    min-height: 22px;
+}
+
+.custom-control-label {
+    padding-left: 0;
+    &:before {
+        background-color: #eee;
+        border: 1px solid #aaa;
+    }
+    &:before,
+    &:after {
+        top: 0.02rem;
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.custom-checkbox {
+    & .custom-control-label {
+        &:before {
+            // border-radius: 0;
+        }
+    }
+    & .custom-control-input {
+        &:focus~.custom-control-label {
+            &:before {
+                box-shadow: none;
+            }
+        }
+        &:checked~.custom-control-label {
+            color: $blue;
+            &:before {
+                border-color: $blue;
+                background-color: transparent;
+            }
+            &:after {
+                background-image: url(#{$assetPath}icons/tick.svg);
+                background-size: 60% 60%;
+            }
+        }
+        &:disabled:checked~.custom-control-label {
+            &:before {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.custom-control-input:active~.custom-control-label {
+    &:before {
+        background-color: rgba($secondary, .4);
+    }
+}
+
+.custom-radio {
+    & .custom-control-label {
+        &:before {
+            //  border-radius: 0;
+        }
+    }
+    & .custom-control-input {
+        &:focus~.custom-control-label {
+            &:before {
+                box-shadow: none;
+            }
+        }
+        &:checked~.custom-control-label {
+            &:before {
+                background-color: transparent;
+                border-color: $blue;
+            }
+            &:after {
+                background-image: url(#{$assetPath}icons/dot.svg);
+                background-size: 75% 75%;
+            }
+        }
+        &:disabled:checked~.custom-control-label {
+            &:before {
+                background-color: rgba($secondary, .5);
+            }
+        }
+    }
+}
+
+.col-form-label-sm {
+    font-size: 12px;
+    padding-bottom: 0;
+    margin-bottom: 3px;
+}
+
+.control-icon {
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: #e2e2e2;
+    position: relative;
+    z-index: 1;
+    margin-right: .375rem;
+    & svg {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: 0 auto;
+        padding: 8px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.control-icon+.custom-control-label {
+    font-weight: 600;
+    color: #aaa;
+    cursor: pointer;
+    &:after,
+    &:before {
+        display: none;
+    }
+}
+
+.custom-control-input:checked+.control-icon {
+    border-color: $secondary;
+    background: #f9f9f9;
+    & svg {
+        fill: $secondary;
+    }
+}
+
+.custom-control-input:checked+.control-icon+.custom-control-label {
+    color: $secondary;
+}
+
+.valign {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.titleCheck {
+    margin-left: .5rem;
+    margin-right: 0;
+    transform: scale(.88);
+    & .custom-control-label {
+        font-weight: normal;
+    }
+}
+
+.dateIcon {
+    background-image: url(#{$assetPath}icons/date_blue.svg);
+    background-position: 96% center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.rightSide {
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+
+small {
+    &.error {
+        font-size: 10px;
+        color: #f00;
+        text-align: left;
+        display: block;
+        padding: 0 1rem;
+    }
+}
+
+.lowKey {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    outline: none;
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.mobileCheck {
+    position: absolute;
+    left: 28px;
+    top: 27px;
+    color: #222;
+    font-size: .875rem;
+}
+
+.mobileCheck+input.form-control {
+    padding-left: 40px;
+}
+
+.select2-container--disabled {
+    & .selection {
+        & .select2-selection {
+            background-image: none
+        }
+    }
+}

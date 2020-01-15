@@ -1,0 +1,113 @@
+.profileDetail {
+    padding: 15px 30px;
+    position: relative;
+    z-index: 1;
+    & .profile-link {
+        font-weight: 600;
+        color: #333;
+        position: relative;
+        padding-left: 60px;
+        padding-top: 10px;
+        min-height: 50px;
+        max-width: 300px;
+        float: left;
+        & h1 {
+            font-size: 15px;
+            margin: 0;
+            color: #fff;
+        }
+        & span {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: block;
+            overflow: hidden;
+            border: 1px solid #f1f1f1;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        & small {
+            opacity: .7;
+            font-size: 10px;
+            color: #fff;
+        }
+    }
+    & ul {
+        font-size: 12px;
+        display: flex;
+        width: calc(100% - 310px);
+        float: right;
+        & li {
+            width: 100%;
+            & span {
+                margin-top: 2px;
+                margin-bottom: 2px;
+            }
+        }
+    }
+}
+
+.profileMore {
+    padding: 20px 25px;
+    background: #fff;
+    border-radius: 15px;
+    color: #818181;
+    font-size: 13px;
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+    & h2 {
+        color: #000;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin: 0;
+    }
+    & h3 {
+        font-size: 13px;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    & ul {
+        list-style-type: disc;
+        list-style: inside;
+        display: flex;
+        flex-wrap: wrap;
+        & li {
+            width: 50%;
+            padding: 2px 4px;
+            opacity: .95;
+            &:first-child:nth-last-child(n + 5),
+            &:first-child:nth-last-child(n + 5)~li {
+                width: 33.3%;
+            }
+        }
+    }
+    & .moreInfo {
+        display: flex;
+        flex-wrap: wrap;
+        & .infoList {
+            padding: 25px 5px;
+            border-bottom: 1px solid #eee;
+            width: calc(50% - 50px);
+            &:nth-child(odd) {
+                margin-right: 50px;
+                position: relative;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    right: -25px;
+                    top: 0;
+                    height: 100%;
+                    width: 1px;
+                    background: #ddd;
+                }
+            }
+            &:nth-last-child(1),
+            &:nth-last-child(2) {
+                border-bottom: none;
+            }
+        }
+    }
+}

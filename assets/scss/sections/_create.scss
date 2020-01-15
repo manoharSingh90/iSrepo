@@ -1,0 +1,329 @@
+.createInfo {
+    padding: 25px 30px;
+    background: #fff;
+    border-radius: 15px;
+    color: #818181;
+    font-size: 13px;
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+    & h2 {
+        color: #000;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    & .removeImg,
+    & .removePic {
+        color: #999;
+        text-decoration: none;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 12px;
+        & b {
+            background: #f00;
+            display: inline-block;
+            vertical-align: middle;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            text-align: center;
+            color: #fff;
+            font-size: 9px;
+            margin-top: -2px;
+        }
+    }
+    & .postImages {
+        margin: 10px 0;
+        display: flex;
+        flex-wrap: wrap;
+        & li {
+            max-width: 180px;
+            margin: 5px 15px;
+            margin-left: 0;
+            & .custom-control {
+                margin-left: 5px;
+                margin-top: 10px;
+            }
+        }
+        & .boxImg {
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            position: relative;
+            width: 180px;
+            height: 120px;
+            overflow: hidden;
+            background: #f1f1f1;
+            cursor: pointer;
+            &.noCrop {
+                pointer-events: none;
+            }
+            & p {
+                margin: 0;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 13px;
+                cursor: pointer;
+            }
+            & video,
+            & img {
+                max-width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+            }
+        }
+        &.squareImg {
+            & li {
+                max-width: 120px;
+                & .boxImg {
+                    width: 120px;
+                }
+            }
+        }
+        & .removePic,
+        & .removeImg {
+            margin: 10px 5px;
+            margin-bottom: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            cursor: pointer;
+            & b {
+                margin-right: 4px;
+                margin-top: -2px;
+            }
+        }
+    }
+    & .logoImages {
+        margin: 10px 0;
+        display: flex;
+        & .boxImg {
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            position: relative;
+            width: 70px;
+            height: 70px;
+            overflow: hidden;
+            background: #f1f1f1;
+            & p {
+                margin: 0;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 11px;
+                cursor: pointer;
+            }
+            & video,
+            & img {
+                max-width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+            }
+        }
+        & .removeImg {
+            margin: 10px 5px;
+            & b {
+                margin-right: 4px;
+                margin-top: -2px;
+            }
+        }
+    }
+    & .galleryImages {
+        margin: 10px 0;
+        display: flex;
+        & li {
+            max-width: 115px;
+            margin-right: 15px;
+        }
+        & .boxImg {
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            position: relative;
+            width: 115px;
+            height: 115px;
+            overflow: hidden;
+            background: #f1f1f1;
+            & p {
+                margin: 0;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 11px;
+                cursor: pointer;
+            }
+            & img {
+                max-width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+            }
+        }
+        & .custom-control {
+            vertical-align: middle;
+            margin-top: 10px;
+        }
+    }
+    & .countStatus {
+        & p {
+            display: flex;
+            color: #333;
+            font-size: 11px;
+            margin: 0;
+            padding-bottom: 5px;
+            & span {
+                width: 50%;
+                padding: 5px 5px;
+            }
+        }
+        & .sampleCount {
+            border-radius: 8px;
+            display: inline-block;
+            background: #f2f2f2;
+            vertical-align: middle;
+            border: 1px solid #d9d9d9;
+            width: 100%;
+            & ul {
+                display: flex;
+                padding: 5px;
+                & li {
+                    padding: 5px 15px;
+                    width: 100%;
+                    & span {
+                        font-size: 15px;
+                        line-height: 18px;
+                        font-weight: 700;
+                        color: $primary;
+                        display: block;
+                    }
+                    & small {
+                        display: block;
+                        font-size: 10px;
+                        color: #444;
+                    }
+                    &:nth-child(2) {
+                        border-right: 1px solid rgba(#000, .02);
+                    }
+                }
+            }
+            &.xtraWide {
+                max-width: 440px;
+                width: 380px;
+            }
+            &.borderStyle {
+                & ul {
+                    padding: 10px 0;
+                    & li {
+                        padding: 0 14px;
+                        border-right: 1px solid rgba(#000, .1);
+                        width: auto;
+                        &:last-child {
+                            border-right: none;
+                        }
+                        & span {
+                            font-size: 16px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .optionInput {
+        position: relative;
+        & .removeImg {
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    & .uploadFile,
+    & .uploadPic {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        display: block;
+    }
+    & .defaultPick,
+    & .removeImg,
+    & .removePic {
+        display: none;
+    }
+}
+
+.postList {
+    max-height: 350px;
+    overflow: auto;
+    & li {
+        position: relative;
+        padding: 5px 0;
+        padding-left: 60px;
+        padding-right: 15px;
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+        & .custom-control {
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            z-index: 1;
+        }
+    }
+}
+
+.postView {
+    position: relative;
+    border: 1px solid #ccc;
+    background: #f1f1f1;
+    padding: 5px;
+    display: flex;
+    border-radius: 10px;
+    cursor: pointer;
+    &.active {
+        border-color: $blue;
+        background: #fff;
+    }
+    & .postView-img {
+        width: 80px;
+        height: 60px;
+        position: relative;
+        border-radius: 10px;
+        border: 1px solid #f1f1f1;
+        overflow: hidden;
+        background: #f1f1f1;
+        & img {
+            max-width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+        }
+    }
+    & .postView-text {
+        font-size: 11px;
+        padding: 5px;
+    }
+    & .postView-img+.postView-text {
+        padding-left: 15px;
+        width: calc(100% - 80px);
+    }
+}

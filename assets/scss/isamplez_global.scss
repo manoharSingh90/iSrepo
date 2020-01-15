@@ -1,0 +1,26 @@
+// Timestamp
+@import "theme/_timestamp.scss";
+// Bootstrap
+@import "../dependencies/bootstrap-4.3.1/scss/bootstrap.scss";
+// Core Base CSS
+@import "theme/_isampleztheme.scss";
+// plugin
+@import "../dependencies/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css";
+@import "../dependencies/jquery-date-range-picker-master/dist/daterangepicker.min.css";
+@import "../dependencies/cropper-master/dist/cropper.min.css";
+//@import "../dependencies/Small-jQuery-Video-Image-Lightbox-Plugin-MediaBox/css/jquery.media.box.css";
+// Elements
+@import "modules/_header.scss";
+@import "modules/_pageformat.scss";
+@import "modules/_footer.scss";
+// Section
+@import "sections/_credential.scss";
+@import "sections/_users.scss";
+@import "sections/_create.scss";
+@import "sections/_detail.scss";
+// Custom plugin
+@import "components/_owl.scss";
+@import "components/_tooltip.scss";
+@import "components/_datepicker.scss";
+@import "components/_lightbox.scss";
+@import "components/_filepond.scss";

@@ -1,0 +1,20 @@
+.google-visualization-tooltip {
+    padding: 4px 8px !important;
+    font-size: 5px !important;
+    border-radius: 6px;
+    background-color: #f1f1f1;
+    border: none !important;
+    &>ul {
+        &>li {
+            &span {
+                color: #f00 !important;
+            }
+        }
+    }
+}
+
+.google-visualization-tooltip-item-list,
+.google-visualization-tooltip-item {
+    padding: 0px !important;
+    margin: 0px !important;
+}

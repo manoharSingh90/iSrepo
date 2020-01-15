@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery MediaBox Plugin Example</title>
+  <link rel="stylesheet" href="css/jquery.media.box.css"/>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="js/jquery.media.box.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.media').mediaBox({
+        closeImage: 'media/close.png',
+        openSpeed: 1000,
+        closeSpeed: 800
+      });
+    });
+  </script>
+  </head>
+  <body style="background-color:#95A5A6; color:#fff;">
+
+<div style="margin: 30px auto;width:600px;text-align: center">
+    <a href="javascript:void(0)" class="media" data-src="media/demo.mp4#t=0.01" data-width="640" data-height="360">Open Movie</a>
+    <a href="javascript:void(0)" class="media" data-src="media/demo.jpg" data-width="400" data-height="300">Open Image</a> </div>
+
+</body>
+</html>

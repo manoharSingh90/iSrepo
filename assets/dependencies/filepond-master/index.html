@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FilePond Demo</title>
+<link href="./dist/filepond.css" rel="stylesheet">
+<link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+<link href="https://unpkg.com/filepond-plugin-file-poster/dist/filepond-plugin-file-poster.css" rel="stylesheet">
+<link href="https://unpkg.com/filepond-plugin-image-edit/dist/filepond-plugin-image-edit.css" rel="stylesheet">
+
+</head>
+<body>
+<input type="file" class="filepond" data-max-file-size="20MB"  data-max-files="10"  accept="image/png, image/jpeg, image/gif, video/mp4" multiple/>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script> 
+<script src="https://unpkg.com/filepond-polyfill"></script> 
+<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script> 
+<script src="https://unpkg.com/filepond-plugin-image-validate-size/dist/filepond-plugin-image-validate-size.js"></script> 
+<script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script> 
+<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.js"></script> 
+<script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
+<script src="https://unpkg.com/filepond-plugin-image-edit/dist/filepond-plugin-image-edit.js"></script>
+<script src="./dist/filepond.js"></script> 
+<script>
+    FilePond.registerPlugin(FilePondPluginImagePreview, FilePondPluginImageValidateSize,FilePondPluginFileValidateType, FilePondPluginFileValidateSize,FilePondPluginImageTransform,FilePondPluginImageEdit);
+
+				    // Get a reference to the file input element
+        var inputElement = document.querySelector('input[type="file"]');
+
+        // Create the FilePond instance
+        var pond = FilePond.create(inputElement, {
+									imageValidateSizeMinWidth: 1125,
+									imageValidateSizeMinHeight: 470,
+									imageEditInstantEdit: true,
+									imageEditEditor: Doka.create({
+
+        // Doka.js options here ...
+
+        cropAspectRatioOptions: [
+            {
+                label: 'Free',
+                value: null
+            },
+            {
+                label: 'Portrait',
+                value: 1.25
+            },
+            {
+                label: 'Square',
+                value: 1
+            },
+            {
+                label: 'Landscape',
+                value: .75
+            }
+        ]
+    })
+									
+									});
+    </script>
+</body>
+</html>

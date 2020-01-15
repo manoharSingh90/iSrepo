@@ -1,0 +1,94 @@
+.owl-carousel {
+    height: 100%;
+    & .owl-item,
+    & .item {
+        width: 88px;
+        height: 88px;
+        display: inline-flex;
+        & img,
+        & video {
+            max-width: 100%;
+            vertical-align: middle;
+            align-items: center;
+            background: #000;
+        }
+    }
+    & .owl-stage-outer {
+        height: 100%;
+        & .owl-stage {
+            height: 100%;
+        }
+    }
+    & .owl-nav {
+        & button {
+            &.owl-prev,
+            &.owl-next {
+                width: 20px;
+                display: inline-block;
+                font-size: 28px !important;
+                color: #888 !important;
+                font-weight: 400 !important;
+                padding: 0 !important;
+                border: none;
+                position: absolute;
+                bottom: 50%;
+                opacity: .5;
+                transition: all 400ms ease;
+                transform: translateY(50%);
+                &:hover {
+                    opacity: 1;
+                }
+                & span {
+                    display: block;
+                    position: relative;
+                    text-align: center;
+                    top: 50%;
+                    height: 25px;
+                    line-height: 16px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+                & img {
+                    max-width: 100%;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            &.owl-prev {
+                left: -25px;
+            }
+            &.owl-next {
+                right: -25px;
+            }
+        }
+    }
+}
+
+.animated {
+    animation-duration: 3s !important;
+    animation-fill-mode: both;
+}
+
+.item {
+    cursor: pointer;
+    &:hover {
+        opacity: .85;
+    }
+    &.active {
+        border: 2px solid $primary;
+        position: relative;
+        &:after {
+            content: "Cover Image";
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: bold;
+            color: $primary;
+            text-align: center;
+            padding: 2px 4px;
+            background: rgba(#fff, .85);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+}
